@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 // aca pasamos los pedidos https a http para la api de weather, ya que no trabaja en https
 app.use(function(request, response, next) {
 
-    // esta linea nos dice si es http o https
+    // esta linea nos dice si es https o algo distinto (como http)
     if (request.headers['x-forwarded-proto'] === 'https') {
         response.redirect('http://' + request.hostname + request.url);
     } else {
