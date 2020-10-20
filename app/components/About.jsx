@@ -10,7 +10,7 @@ var About = React.createClass({
 
 var About = (props) => {
     return (
-        <h3>Esta es la pagina de about</h3>
+        <h3>Esta es la pagina de about!!!</h3>
     )
 }
 
