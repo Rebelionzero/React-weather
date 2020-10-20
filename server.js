@@ -9,10 +9,10 @@ const PORT = process.env.PORT || 3000;
 app.use(function(request, response, next) {
 
     // esta linea nos dice si es http o https
-    if (request.headers['x-forwarded-proto'] === 'http') {
-        next();
-    } else {
+    if (request.headers['x-forwarded-proto'] === 'https') {
         response.redirect('http://' + request.hostname + request.url);
+    } else {
+        next();
     }
 })
 
